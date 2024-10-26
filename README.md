@@ -112,6 +112,7 @@ This [document](https://dev.ti.com/tirex/content/tirex-product-tree/am62x-devtoo
     -   Follow the [guide](https://dev.ti.com/tirex/content/tirex-product-tree/am62x-devtools/docs/am62x_skevm_quick_start_guide.html) to download a pre-built `.wic` image
 
     -   Follow this [guide](https://software-dl.ti.com/processor-sdk-linux/esd/AM62X/09_01_00_08/exports/docs/linux/Overview_Building_the_SDK.html) to build the image with Yocto
+        -   A tutorial to get lvgl recipe setup on Yocto is provided in [LVGL official documentation - Yocto](https://docs.lvgl.io/master/details/integration/os/yocto/lvgl_recipe.html)
 
 -   If there are problems encountered flashing the SD card with BalenaEtcher as mentioned in the documentation, use this command instead:
 
@@ -151,12 +152,29 @@ Clone the repository:
 git clone --recurse-submodules https://github.com/lvgl/lv_port_texas_sk-am62b-p1.git
 ```
 
+**IMPORTANT**: 
+
+- default application from lv_port_linux runs the widget demo. To run the benchmark demo, modify `lv_port_linux/main.c` : 
+
+  ```c
+  /*Create a Demo*/
+  // lv_demo_widgets();
+  // lv_demo_widgets_start_slideshow();
+  lv_demo_benchmark();
+  ```
+
+- The default lv_conf.h might not be the best configuration for the board. Feel free to replace the default lv_conf.h with one of the provided configurations in `lv_conf_example` folder.
+
+  ```bash
+  cp lv_conf_example/lv_conf_fb_4_threads.h lv_port_linux/lv_conf.h
+  ```
+
 Build the docker image and the lvgl benchmark application:
 
 ```bash
 cd lv_port_texas_sk-am62b-p1
-./scripts/docker_setup.sh --build
-./scripts/docker_setup.sh --run
+./scripts/docker_setup.sh --create-image
+./scripts/docker_setup.sh --build-app
 ```
 
 Run the executable on the target:
@@ -184,14 +202,14 @@ Run the executable on the target:
 -   Then transfer the executable on the board:
 
     ```bash
-    scp lvgl_port_linux/bin/lvgl-app root@<BOARD_IP>:/root
+    scp lv_port_linux/bin/lvgl-app root@<BOARD_IP>:/root
     ```
 
 -   Start the application
 
     ```bash
     ssh root@<BOARD_IP>
-
+    
     ## stop default presentation screen if it is running
     systemctl stop ti-apps-launcher
     ######################################
@@ -199,7 +217,7 @@ Run the executable on the target:
     systemctl stop weston.socket
     systemctl stop weston.service
     ######################################
-
+    
     ./lvgl-app
     ```
 
@@ -207,9 +225,9 @@ Run the executable on the target:
 
 Some configurations are provided in the folder `lvgl_conf_example` .
 
-The default configuration used is lv_conf_fb_4_threads.h. To change the configuration, modify the `lvgl_port_linux/lv_conf.h` file with the desired configuration.
+The default configuration used is lv_conf_fb_4_threads.h. To change the configuration, modify the `lv_port_linux/lv_conf.h` file with the desired configuration.
 
-Also modify the `lvgl_port_linux/CMakelists.txt` file option:
+Also modify the `lv_port_linux/CMakelists.txt` file option:
 
 ```cmake
 option(LV_USE_WAYLAND "Use the wayland client backend" OFF)
@@ -221,12 +239,12 @@ Default backend is fbdev. Only set 1 of these options to "ON" and ensure it's co
 
 ### Start with your own application
 
-The folder `lvgl_port_linux` is an example of an application using LVGL.
+The folder `lv_port_linux` is an example of an application using LVGL.
 
 LVGL is integrated as a submodule in the folder. To change the version of the library:
 
 ```bash
-cd lvgl_port_linux
+cd lv_port_linux
 git checkout <branch_name_or_commit_hash>
 ```
 
@@ -247,7 +265,7 @@ The main steps to create your own application are:
 If there is any problem with the output folder generated permissions, modify the permissions:
 
 ```bash
-sudo chown -R $(whoami):$(whoami) lvgl_port_linux/bin
+sudo chown -R $(whoami):$(whoami) lv_port_linux/bin
 ```
 
 ### Fbdev example runtime error
