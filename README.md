@@ -63,6 +63,12 @@ The other configurations are:
 
 Any of these buffering strategies can be used with multiple threads to render the frames.
 
+Check out SK-AM62B-P1 in action, running LVGL's benchmark demo:
+
+<a href="https://www.youtube.com/watch?v=fgpnzjSEyWM">
+    <img src="https://github.com/user-attachments/assets/38d82d53-9240-4d7b-aab4-e1d07f7074f6" width="50%" alt="image">
+</a>
+
 ## Specification
 
 ### CPU and memory
