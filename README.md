@@ -218,6 +218,8 @@ Run the executable on the target:
     systemctl stop weston.service
     ######################################
     
+    export LV_LINUX_FBDEV_DEVICE=/dev/fb1
+    
     ./lvgl-app
     ```
 
@@ -226,16 +228,6 @@ Run the executable on the target:
 Some configurations are provided in the folder `lvgl_conf_example` .
 
 The default configuration used is lv_conf_fb_4_threads.h. To change the configuration, modify the `lv_port_linux/lv_conf.h` file with the desired configuration.
-
-Also modify the `lv_port_linux/CMakelists.txt` file option:
-
-```cmake
-option(LV_USE_WAYLAND "Use the wayland client backend" OFF)
-option(LV_USE_SDL "Use the SDL backend" OFF)
-option(LV_USE_DRM "Use the libdrm backend" OFF)
-```
-
-Default backend is fbdev. Only set 1 of these options to "ON" and ensure it's coherent with `lv_conf.h`. This can also be changed from the script `scripts/build_app.sh`.
 
 ### Start with your own application
 
