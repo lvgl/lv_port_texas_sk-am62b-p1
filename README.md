@@ -6,7 +6,8 @@ This guide provides steps to setup the SK-AM62B-P1 and to cross-compile an LVGL 
 
 ## Buy
 
-You can purchase the SK-AM62B-P1 board from [TI website](https://www.ti.com/tool/SK-AM62B-P1).
+You can purchase the SK-AM62B-P1 board from [TI website](https://www.ti.com/tool/SK-AM62B-P1). Check out the product specification in the [product folder](https://www.ti.com/product/AM625)!
+
 
 ## Benchmark
 
