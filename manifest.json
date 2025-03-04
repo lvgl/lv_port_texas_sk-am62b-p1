@@ -14,7 +14,7 @@
         "specs": {
             "MPU": "AM625 with Quad 64-bit Arm® Cortex®-A53 @1.4GHz",
             "MCU": "Arm® Cortex®-M4F MCU",
-            "RAM": "2 GB DDR4 16-Bit data bus with inline ECC",
+            "RAM": "2 GB DDR4 16-Bit data bus with inline ECC (1600 MT/s)",
             "Flash": "Micro SD Card",
             "GPU": "PowerVR"
         }
