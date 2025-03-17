@@ -25,6 +25,10 @@
     "logos": [
         "https://raw.githubusercontent.com/lvgl/project-creator/master/meta/images/texas_instruments/logo.svg"
     ],
+    "image": "https://raw.githubusercontent.com/lvgl/lv_port_texas_sk-am62b-p1/master/board_images/ti-sk-am62b-p1.webp",
+    "buy_now_links": [
+        "https://www.ti.com/tool/SK-AM62B-P1"
+    ],
     "branches": [
         "release/v9.2"
     ],
