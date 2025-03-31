@@ -1,4 +1,4 @@
-# LVGL ported to AM62B-P1 (TI)
+# LVGL ported to AM62B-P1 (Texas Instruments)
 
 ## Overview
 
@@ -6,7 +6,7 @@ This guide provides steps to setup the SK-AM62B-P1 and to cross-compile an LVGL 
 
 ## Buy
 
-You can purchase the SK-AM62B-P1 board from [TI website](https://www.ti.com/tool/SK-AM62B-P1). Check out the product specification in the [product folder](https://www.ti.com/product/AM625)!
+You can purchase the SK-AM62B-P1 board from [Texas Instruments website](https://www.ti.com/tool/SK-AM62B-P1). Check out the product specification in the [product folder](https://www.ti.com/product/AM625)!
 
 
 ## Benchmark
@@ -67,7 +67,7 @@ Any of these buffering strategies can be used with multiple threads to render th
 Check out SK-AM62B-P1 in action, running LVGL's benchmark demo:
 
 <a href="https://www.youtube.com/watch?v=fgpnzjSEyWM">
-    <img src="https://github.com/user-attachments/assets/38d82d53-9240-4d7b-aab4-e1d07f7074f6" width="50%" alt="image">
+    <img src="https://github.com/user-attachments/assets/bcb85b05-bb05-42b7-aa9b-467c786e8e4d" width="50%" alt="image">
 </a>
 
 ## Specification
@@ -105,7 +105,7 @@ Check out SK-AM62B-P1 in action, running LVGL's benchmark demo:
 
 ### Hardware setup
 
-This [document](https://dev.ti.com/tirex/content/tirex-product-tree/am62x-devtools/docs/am62x_skevm_quick_start_guide.html) from TI provides detailed information for the hardware setup
+This [document](https://dev.ti.com/tirex/content/tirex-product-tree/am62x-devtools/docs/am62x_skevm_quick_start_guide.html) from Texas Instruments provides detailed information for the hardware setup
 
 -   Connect to the board the following:
 
