@@ -13,6 +13,13 @@ You can purchase the SK-AM62B-P1 board from [Texas Instruments website](https://
 
 The default buffering is fbdev.
 
+Check out SK-AM62B-P1 in action, running LVGL's benchmark demo:
+
+<a href="https://www.youtube.com/watch?v=fgpnzjSEyWM">
+    <img src="https://github.com/user-attachments/assets/bcb85b05-bb05-42b7-aa9b-467c786e8e4d" width="75%" alt="image">
+</a>
+
+
 **Frame buffer, 1 thread**
 
 | Name                      | Avg. CPU | Avg. FPS | Avg. time | render time | flush time |
@@ -63,12 +70,6 @@ The other configurations are:
 -   Wayland
 
 Any of these buffering strategies can be used with multiple threads to render the frames.
-
-Check out SK-AM62B-P1 in action, running LVGL's benchmark demo:
-
-<a href="https://www.youtube.com/watch?v=fgpnzjSEyWM">
-    <img src="https://github.com/user-attachments/assets/bcb85b05-bb05-42b7-aa9b-467c786e8e4d" width="50%" alt="image">
-</a>
 
 ## Specification
 
