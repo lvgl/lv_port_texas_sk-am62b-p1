@@ -125,7 +125,7 @@ This [document](https://dev.ti.com/tirex/content/tirex-product-tree/processors-d
 -   If there are problems encountered flashing the SD card with BalenaEtcher as mentioned in the documentation, use this command instead:
 
     ```bash
-    # Mount the SD on your system and find where it was mounter (e.g.: sda, sdb)
+    # Mount the SD on your system and find where it is mounted (e.g.: sda, sdb)
     sudo dd if=path/to/am62-image.wic of=/dev/sdX bs=4M status=progress conv=fsync
     ```
 
