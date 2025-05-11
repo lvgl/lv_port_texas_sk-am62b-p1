@@ -106,7 +106,7 @@ Any of these buffering strategies can be used with multiple threads to render th
 
 ### Hardware setup
 
-This [document](https://dev.ti.com/tirex/content/tirex-product-tree/am62x-devtools/docs/am62x_skevm_quick_start_guide.html) from Texas Instruments provides detailed information for the hardware setup
+This [document](https://dev.ti.com/tirex/content/tirex-product-tree/processors-devtools_1_02_01/am62x_skevm_quick_start_guide.html) from Texas Instruments provides detailed information for the hardware setup
 
 -   Connect to the board the following:
 
@@ -117,7 +117,7 @@ This [document](https://dev.ti.com/tirex/content/tirex-product-tree/am62x-devtoo
 
 -   SD card is needed to flash the image.
 
-    -   Follow the [guide](https://dev.ti.com/tirex/content/tirex-product-tree/am62x-devtools/docs/am62x_skevm_quick_start_guide.html) to download a pre-built `.wic` image
+    -   Follow the [guide](https://dev.ti.com/tirex/content/tirex-product-tree/processors-devtools_1_02_01/am62x_skevm_quick_start_guide.html) to download a pre-built `.wic` image
 
     -   Follow this [guide](https://software-dl.ti.com/processor-sdk-linux/esd/AM62X/09_01_00_08/exports/docs/linux/Overview_Building_the_SDK.html) to build the image with Yocto
         -   A tutorial to get lvgl recipe setup on Yocto is provided in [LVGL official documentation - Yocto](https://docs.lvgl.io/master/details/integration/os/yocto/lvgl_recipe.html)
@@ -125,7 +125,7 @@ This [document](https://dev.ti.com/tirex/content/tirex-product-tree/am62x-devtoo
 -   If there are problems encountered flashing the SD card with BalenaEtcher as mentioned in the documentation, use this command instead:
 
     ```bash
-    # Mount the SD on your system and find where it was mounter (e.g.: sda, sdb)
+    # Mount the SD on your system and find where it is mounted (e.g.: sda, sdb)
     sudo dd if=path/to/am62-image.wic of=/dev/sdX bs=4M status=progress conv=fsync
     ```
 
@@ -137,7 +137,7 @@ This guide was tested on Ubuntu 22.04 host.
 
 #### Install docker
 
--   Follow this [tutorial](/https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04) to install and setup docker on your system.
+-   Follow this [tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04) to install and setup docker on your system.
 
 -   Support to run arm64 docker containers on the host:
 
