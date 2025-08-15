@@ -1,5 +1,8 @@
 # LVGL ported to AM62B-P1 (Texas Instruments)
 
+**:rocket: This repository is available in the [LVGL Project Creator](https://lvgl.io/tools/project-creator), making it easy to create and customize a new project in just a few clicks.**
+
+
 ## Overview
 
 This guide provides steps to setup the SK-AM62B-P1 and to cross-compile an LVGL application to run it the target.
